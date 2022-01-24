@@ -35,6 +35,7 @@ aws iam add-user-to-group --group-name AWSBilling --user-name BillingUser
 #Verify the password policy set by you is now active
 aws iam get-account-password-policy
 
+
 #Create a new user and try to associate a password that violates the above policy
 aws iam create-user --user-name BillingUser1
 

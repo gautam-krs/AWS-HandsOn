@@ -113,6 +113,7 @@ else
     exit 
 fi
 
+
 ###########Cloudwatch LogGroup Deletion###############################
 echo "Listing Cloudwatch LogGroup for Account : " $1 $2
 aws logs describe-log-groups --query logGroups[].logGroupName
