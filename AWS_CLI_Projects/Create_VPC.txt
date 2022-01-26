@@ -1,9 +1,0 @@
-#Create a VPC with CIDR 10.10.0.0/16
-VPC_ID=$(aws ec2 create-vpc --cidr-block 10.10.0.0/16 \
---tag-specifications 'ResourceType=vpc,Tags=[{Key=Name,Value=My-Test-VPC}]' \
---query Vpc.VpcId --output text )
-
-#Verify that VPC is created as expected
-aws ec2 describe-vpcs --vpc-ids $VPC_ID
-
-
